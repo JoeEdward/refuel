@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'pages.start');
+
+Route::get('/login', 'loginController@new');
+
+Route::get('/login/callback', 'loginController@callback');
