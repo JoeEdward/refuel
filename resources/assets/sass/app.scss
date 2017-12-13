@@ -7,3 +7,35 @@
 
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+@font-face {
+	font-family: aleo;
+	src: url(/fonts/aleo-regular.otf);
+}
+
+.google-button {
+	height: 50px;
+	width: auto;
+}
+
+.center {
+	text-align: center;
+	display: block;
+
+}
+
+.title {
+	font-size: 25px;
+	font-family: aleo;
+}
+
+#logo {
+	font-family: aleo;
+	font-size: 20px;
+	padding-bottom: 0px;
+}
+
+#logo-sub {
+	font-size: 12px;
+	font-family: aleo;
+}
