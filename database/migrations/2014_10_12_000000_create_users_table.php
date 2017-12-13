@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('type');
             $table->integer('year_group');
+            $table->string('remember_token');
             $table->timestamps();
         });
     }

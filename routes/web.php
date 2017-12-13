@@ -11,8 +11,16 @@
 |
 */
 
-Route::view('/', 'pages.start');
+Route::view('/', 'pages.start')->name('home');
 
-Route::get('/login', 'loginController@new');
 
+//Login Routes
+
+Route::view('/failed', 'users.fail')->name('login');
+Route::view('/login', 'users.new');
+Route::get('/login/google', 'loginController@new');
 Route::get('/login/callback', 'loginController@callback');
+Route::view('/dashboard', 'users.dashboard')->name('dashboard')->middleware('auth');
+Route::get('/logout', 'loginController@destroy');
+
+
