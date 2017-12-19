@@ -70,7 +70,7 @@ class loginController extends Controller
     {
         auth()->logout();
 
-        return redirect('home');
+        return redirect('/');
     }
 
 

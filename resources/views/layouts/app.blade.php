@@ -5,34 +5,30 @@
 	@yield('header')
 
 	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<script type="text/javascript" src="js/app.js"></script>
+
 
 </head>
 <body>
 
-	<div class="navbar">
-		
-		<div class="navbar-brand container-fluid">
-			
-			<h3 class="center" id="logo">Refuel</h3>
-			<p class="center" id="logo-sub">Ordering Sytem</p>
 
-		</div>
-		<ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
 
+	@include('partials.navbar')
+
+	<br><br>
+
+<div class="col-md-8 col-md-offset-2">
+	<div class="container-fluid">
+
+		@yield('content')
+	
 	</div>
+</div>
 
-	@yield('content')
+<div class="row"></div>
 
+
+	@include('partials.footer')
 
 	@yield('footer')
 </body>

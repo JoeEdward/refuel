@@ -8365,9 +8365,29 @@ button.close {
   display: block;
 }
 
-.title {
-  font-size: 25px;
+.aleo {
   font-family: aleo;
+}
+
+.footer-links {
+  padding-right: 15px;
+  font-size: 18px;
+}
+
+.footer {
+  margin-top: 5%;
+  background-color: #bdc3c7;
+}
+
+.title {
+  font-size: 30px;
+  font-family: aleo;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-family: arial;
+  color: #7f8c8d;
 }
 
 #logo {
