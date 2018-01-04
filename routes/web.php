@@ -12,6 +12,7 @@
 */
 
 Route::view('/', 'pages.start')->name('home');
+Route::view('/home', 'pages.start');
 
 
 //Login Routes
@@ -22,4 +23,6 @@ Route::get('/login/callback', 'loginController@callback');
 Route::view('/dashboard', 'users.dashboard')->name('dashboard')->middleware('auth');
 Route::get('/logout', 'loginController@destroy');
 
+Route::get('/dashboard/additem', 'FoodController@make');
+Route::post('/items/add', 'FoodController@store');
 
