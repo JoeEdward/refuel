@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Refuel</title>
+	<title>Refuel - @yield('title')</title>
 	@yield('header')
 
-	<link rel="stylesheet" type="text/css" href="css/app.css">
-	<script type="text/javascript" src="js/app.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/app.css">
+	<script type="text/javascript" src="/js/app.js"></script>
 
 
 </head>
