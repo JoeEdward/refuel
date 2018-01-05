@@ -10,7 +10,7 @@
 <div class="row">
 	<div class="col-md-6">
 		
-		<h3 class="center title">Very Imformative Stuff about the website before signing up!</h3>
+		<h3 class="center title">Very Informative Stuff about the website before signing up!</h3>
 		<p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
 
 	</div>
@@ -18,7 +18,7 @@
 
 	<div class="col-md-6">
 
-		<h3 class="center aleo">Register an intrest</h3>
+		<h3 class="center aleo">Register an interest</h3>
 		<form class="center"> <!-- Open Form-->
 
 			<!-- First row of quote form-->
