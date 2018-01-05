@@ -12,7 +12,7 @@
 
 	@include('partials.errors')
 
-		<form method="POST" action="/items/add">
+		<form method="POST" action="/items/add" enctype="multipart/form-data">
 
 			{{ csrf_field() }}
 
@@ -70,7 +70,7 @@
 			</div>
 
 		</form>
-
+		
 	</div>
 	
 @endsection

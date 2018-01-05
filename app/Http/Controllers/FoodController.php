@@ -29,19 +29,20 @@ class FoodController extends Controller
 		]);
 
 		if($request->hasFile('image')) {
-			dd('filefound');
+			$filename = time()."-".$request->input('name').".".$request->image->getClientOriginalExtension();
+			$path = $request->image->storeAs('public', $filename);
+
 		};
 
-		dd(\Input::file('image'));
 
 		Food::create([
 			'name' => $request->input('name'),
 			'description' => $request->input('desc'),
 			'type' => $request->input('type'),
 			'cal' => $request->input('cal'),
-			'img' => $request->input('image')
+			'img' => $path
 		]);
 
-		return back();
+		return redirect('dashboard');
 	}
 }
