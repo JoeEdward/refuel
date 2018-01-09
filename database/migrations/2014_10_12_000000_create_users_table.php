@@ -18,8 +18,9 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('type');
-            $table->integer('year_group');
-            $table->string('remember_token');
+            $table->integer('year_group')->nullable([$value = true]);
+            $table->boolean('allow');
+            $table->rememberToken();
             $table->timestamps();
         });
     }
