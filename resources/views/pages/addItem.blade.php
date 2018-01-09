@@ -53,6 +53,11 @@
 
 			</div>
 
+			<label for="price">Price* </label>
+			<div class="input-group center">
+				<input type="text" name="price" class="form-control">
+			</div>
+
 						<label for="image">Image*</label>
 			<div class="input-group center">
 

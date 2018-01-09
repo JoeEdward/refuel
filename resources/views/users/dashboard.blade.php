@@ -81,6 +81,14 @@ chart.draw(data, options);
 
 @section('content')
 
+
+@if (session('status'))
+<br>
+    <div class="alert alert-success">
+        {{ session('status') }}
+    </div>
+@endif
+
 <div class="col-md-3">
 	<br>
 	<div class="panel panel-primary">
@@ -97,7 +105,7 @@ chart.draw(data, options);
 
             <li><a href="">Dashboard</a></li>
             <li><a href="">User Management</a></li>
-            <li><a href="">Menu Management</a></li>
+            <li><a href="/items">Menu Management</a></li>
             <li><a href="">Account settings</a></li>
             <li><a href="">Your orders</a></li>
 

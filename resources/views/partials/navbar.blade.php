@@ -12,7 +12,7 @@
 
 			@if(Auth::check())
 				<ul class="nav navbar-nav navbar-right">
-				<li><a href="/logout">Logout</a></li>
+				<li><a href="/logout">Logout <span class="glyphicon glyphicon-log-out"></span></a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ auth()->user()->name }} <span class="caret"></span></a>
 					<ul class="dropdown-menu">
@@ -21,6 +21,7 @@
 						<li><a href="#">Account</a></li>
 					</ul>
 				</li>
+				<li><a href="">Cart</li>
 			@else
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="/login">Register</a></li>
