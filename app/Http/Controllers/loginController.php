@@ -55,7 +55,8 @@ class loginController extends Controller
             'email' => $user->getEmail(),
             'name' => $user->getName(),
             'type' => $type,
-            'year_group' => $year_group
+            'year_group' => $year_group,
+            'allow' => true
         ]);
 
         auth()->login($newUser);
