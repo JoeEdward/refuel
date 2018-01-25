@@ -21,7 +21,7 @@
 						<li><a href="#">Account</a></li>
 					</ul>
 				</li>
-				<li><a href="">Cart</li>
+				<li><a href="/dashboard/cart" id="cart">Cart</a></li>
 			@else
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="/login">Register</a></li>
