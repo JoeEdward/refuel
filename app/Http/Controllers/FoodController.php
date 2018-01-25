@@ -32,8 +32,7 @@ class FoodController extends Controller
 
 	public function store(Request $request)
 	{
-
-
+		
 		$this->validate($request, [
 			'name' => 'required',
 			'desc' => 'required',
@@ -48,6 +47,11 @@ class FoodController extends Controller
 
 		};
 
+		$allergies = "";
+
+		foreach ($request->input('allergies') as $key => $value) {
+			$allergies = $allergies . $key . ' ';
+		};
 
 		Food::create([
 			'name' => $request->input('name'),
@@ -55,7 +59,8 @@ class FoodController extends Controller
 			'type' => $request->input('type'),
 			'cal' => $request->input('cal'),
 			'price' => $request->input('price'),
-			'img' => $path
+			'img' => $path,
+			'allergies' => $allergies,
 		]);
 
 		return redirect('dashboard')->with('status', 'Item Added Successfully');
@@ -73,8 +78,10 @@ class FoodController extends Controller
 		$food->description = $request->input('desc');
 		$food->type = $request->input('type');
 		$food->cal = $request->input('cal');
+		
 		if($request->hasFile('image')){
 			\Storage::delete($item->img);
+			
 			$filename = time()."-".$request->input('name').".".$request->image->getClientOriginalExtension();
 			$path = $request->image->storeAs('public', $filename);
 			$food->img = $path;

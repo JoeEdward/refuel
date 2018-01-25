@@ -4,6 +4,7 @@
 
 @section('content')
 <br>
+
 <div class="panel panel-defualt">
 	<div class="panel-body">
 		<div class="row">
@@ -13,8 +14,17 @@
 				<p>{{$item->description}}</p>
 				<p><strong>Price: </strong></p>
 				<p>£{{$item->price}}</p>
+				@if (auth()->user()->type == "student")
+				
+				<p><strong>Allergies:</strong></p>
+				<p>{{$item->allergies}}</p>
+				
+				@else
+
 				<p><strong>Item type:</strong></p>
 				<p>{{$item->type}}</p>
+
+				@endif
 			</div>
 			<div class="col-md-5">
 				<img src="{{ Storage::url($item->img)}} " class="img-rounded" style="width: 90%; height: auto">
