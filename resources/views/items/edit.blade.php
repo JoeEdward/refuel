@@ -8,7 +8,7 @@
 
 @include('partials.errors')
 	
-	<form action="/item/{{$item->id}}/update" method="POST" enctype="multipart/form-data"> 
+	<form action="/item/{{$item->id}}/edit" method="POST" enctype="multipart/form-data"> 
 
 		{{ csrf_field() }}
 

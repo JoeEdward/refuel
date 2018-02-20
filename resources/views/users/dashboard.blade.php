@@ -116,8 +116,9 @@ chart.draw(data, options);
         <ul>
 
             <li><a href="">Dashboard</a></li>
-            <li><a href="">Account settings</a></li>
+            <li><a href="/dashboard/account">Account settings</a></li>
             <li><a href="">Your orders</a></li>
+            <li><a href="/menu">Menu</a></li>
 
 
         </ul>
@@ -156,20 +157,14 @@ chart.draw(data, options);
     </div>
 </div>
 </div>  {{-- panel End --}}
-@endif
-
+@else
 <div class="panel panel-info">
 
 
   <div class="panel-heading">
     <h4>Order State</h4>
 </div>    
-@if(auth()->user()->type = 'staff')
-<div class="alert alert-danger alert-dismissible" role="alert">
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  <strong>Alert</strong> Student orders are given priority over staff orders. Sorry.
-</div>
-@endif
+
 <div class="panel-body">
    <div class="progress">
       <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
@@ -179,6 +174,7 @@ chart.draw(data, options);
     <p>Orders In The Oven</p>
 </div>
 </div>
+@endif
 </div>
 
 @endsection

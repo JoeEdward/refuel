@@ -15,9 +15,11 @@ class staffCheck
      */
     public function handle($request, Closure $next)
     {
+    if (auth()->check()) {
         if (\Auth::user()->type == 'student') {
             return redirect('failed');
         };
+    };
 
         return $next($request);
     }

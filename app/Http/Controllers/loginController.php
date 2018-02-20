@@ -20,7 +20,7 @@ class loginController extends Controller
     	$user = Socialite::driver('google')->user();
 
     	// OAuth Two Providers
-      $token = $user->token;
+        $token = $user->token;
 		$refreshToken = $user->refreshToken; // not always provided
 		$expiresIn = $user->expiresIn;
 

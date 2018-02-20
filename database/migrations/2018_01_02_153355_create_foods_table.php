@@ -21,6 +21,7 @@ class CreateFoodsTable extends Migration
             $table->integer('cal')->nullable([$value = true]);
             $table->float('price');
             $table->string('img');
+            $table->string('allergies');
             $table->timestamps();
         });
     }

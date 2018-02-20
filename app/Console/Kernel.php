@@ -26,6 +26,11 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
+
+        $schedule->call(function() {
+            \App\Order::where('archived', 0)->update(['archived' => 1]);
+            DB::table('order_items')->delete();
+        })->daily();
     }
 
     /**
