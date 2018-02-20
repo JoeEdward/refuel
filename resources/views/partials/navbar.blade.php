@@ -17,11 +17,17 @@
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ auth()->user()->name }} <span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li><a href="/dashboard">Dashboard</a></li>
-						<li><a href="#">Orders</a></li>
-						<li><a href="#">Account</a></li>
+						<li><a href="/cart">Orders</a></li>
+						<li><a href="/dashboard/manage">Account</a></li>
+						<li><a href="/menu">Menu</a></li>
 					</ul>
 				</li>
-				<li><a href="/dashboard/cart" id="cart">Cart</a></li>
+				<li><a href="/cart" id="cart">Cart 
+
+					{{-- @if(count(auth()->user()->orders[0]) == null)
+					<span class="label label-success">New!</span>
+					@endif --}}
+				</a></li>
 			@else
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="/login">Register</a></li>

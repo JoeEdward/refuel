@@ -23,7 +23,7 @@
 					</a>
 						<div class="row"></div>
 							<div class="col-md-12">
-						<button class="btn-success btn center col-md-12" onclick="addToCart({{$item->id}})">Quick Add</button>
+						<a href="/cart/additem/{{$item->id}}"><button class="btn-success btn center col-md-12">Quick Add</button></a>
 					</div>
 					</div>
 				</div>

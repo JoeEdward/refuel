@@ -40,7 +40,7 @@
 
 			</div>
 		</div>
-		<button class="btn btn-success col-md-12">Add to cart</button>
+		<a href="/cart/additem/{{$item->id}}"><button class="btn btn-success col-md-12">Add to cart</button></a>
 	</div>
 </div>
 

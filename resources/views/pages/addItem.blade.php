@@ -14,7 +14,7 @@
 
 	@include('partials.errors')
 
-	<form method="POST" action="/dashboard/additems" enctype="multipart/form-data">
+	<form method="POST" action="/dashboard/additem" enctype="multipart/form-data">
 
 		{{ csrf_field() }}
 
