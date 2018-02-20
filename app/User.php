@@ -26,4 +26,17 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
+
+    public function newOrder()
+    {
+        $this->orders()->create([
+            'user_id' => auth()->id(),
+        ]);
+
+    }
 }
