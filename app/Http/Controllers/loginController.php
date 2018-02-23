@@ -16,7 +16,7 @@ class loginController extends Controller
     public function callback()
     {
     	
-
+        // Send OATH request to google sign in api through laravel socialite
     	$user = Socialite::driver('google')->user();
 
     	// OAuth Two Providers
@@ -26,6 +26,7 @@ class loginController extends Controller
 
         $type = 'defualt';
 
+        // Array for automatically setting up the users year group
         $years = array(
             11 => 13 ,
             12 => 12,
@@ -38,6 +39,7 @@ class loginController extends Controller
 
         $year_group = null;
 
+        // Determines what year they are in by checking the date on there username.
         if(substr($user->getEmail(), 0, 2) > 0) {
             $type = "student";
 
@@ -47,9 +49,7 @@ class loginController extends Controller
             $type = "staff";
         }
 
-
-
-        
+        // Makes the new user using the update or create method which looks for the values in the database first then if its not found makes a new record or updates the current one.
 
         $newUser = User::updateOrCreate([
             'email' => $user->getEmail(),
@@ -59,6 +59,8 @@ class loginController extends Controller
             'allow' => true
         ]);
 
+
+        // Defualt laravel function to log the user into the authentication framework.
         auth()->login($newUser);
 
         return redirect('dashboard');
@@ -69,6 +71,8 @@ class loginController extends Controller
 
     public function destroy()
     {
+        // Ends the users session on the site by logging them out // Does not actually delete the user.
+
         auth()->logout();
 
         return redirect('/');
