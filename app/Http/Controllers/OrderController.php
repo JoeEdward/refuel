@@ -86,7 +86,8 @@ class OrderController extends Controller
 
 	public function index()
 	{
-		$orders = \App\Order::get();
+		$orders = \App\Order::where('archived',  0)->get();
+
 
 		return view('orders.index', ['orders' => $orders]);
 	}

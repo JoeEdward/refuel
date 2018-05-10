@@ -17,13 +17,13 @@ class loginController extends Controller
     {
     	
         // Send OATH request to google sign in api through laravel socialite
-    	$user = Socialite::driver('google')->user();
-
-    	// OAuth Two Providers
-        $token = $user->token;
-		$refreshToken = $user->refreshToken; // not always provided
-		$expiresIn = $user->expiresIn;
-
+                $user = Socialite::driver('google')->user();
+        
+                // OAuth Two Providers
+                $token = $user->token;
+                $refreshToken = $user->refreshToken; // not always provided
+                $expiresIn = $user->expiresIn;
+        
         $type = 'defualt';
 
         // Array for automatically setting up the users year group

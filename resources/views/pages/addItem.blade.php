@@ -20,7 +20,7 @@
 
 		<label for="name">Item Name*</label>
 		<div class="input-group center">
-			<input type="text" name="name" class="form-control"><br>
+			<input type="text" name="name" class="form-control" required><br>
 
 		</div>
 

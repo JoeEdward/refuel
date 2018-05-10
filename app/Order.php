@@ -27,10 +27,4 @@ class Order extends Model
     		'item_id' => $itemId,
     	]);
     }
-    public function current()
-    {
-        $orders = Order::where('archived', 0)->get();
-
-        return $orders;
-    }
 }
